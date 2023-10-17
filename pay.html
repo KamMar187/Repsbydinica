@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        input[type="text"], textarea, input[type="email"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="orderForm">
+        <input type="text" placeholder="Nume" id="name" required><br>
+        <input type="email" placeholder="Email" id="email" required><br>
+        <textarea placeholder="Detalii Comandă" id="orderDetails" required></textarea><br>
+        <input type="submit" value="Plasează Comanda">
+    </form>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const orderDetails = document.getElementById('orderDetails').value;
+
+            const emailContent = `Nume: ${name}\nEmail: ${email}\nDetalii Comandă: ${orderDetails}`;
+
+            // Utilizează API-ul corespunzător pentru a trimite emailul aici
+            trimiteEmail("micisiliu866@example.com", "Comandă Nouă", emailContent);
+            
+            // Curăță formularul după trimitere
+            document.getElementById('orderForm').reset();
+        });
+
+        function trimiteEmail(catre, subiect, continut) {
+            // Înlocuiește cu codul real de trimitere a emailului pe partea de server
+            console.log("Trimit email către: " + catre);
+            console.log("Subiect: " + subiect);
+            console.log("Conținut: " + continut);
+        }
+    </script>
+
+</body>
+</html>

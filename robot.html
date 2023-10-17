@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Chatbot</title>
+	<link rel="icon" href="bot.png" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<!-- NAVBAR -->
+    <section id="header">
+		<li><a href="robot.html"><img src="bot-mini.png" width="50px" alt=""></a></li>
+		<div>
+		  <ul id="navbar">
+			<li><a class="active" href="index.html">Home</a></li>
+			<li><a href="shop.html">Shop</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="#">Login</a></li>
+			<li id="lg-bag">
+			  <a href="cart.html"><i class="fa-solid fa-shopping-bag"></i></a>
+			</li>
+			<a href="#" id="close"><i class="fa fa-times"></i></a>
+		  </ul>
+		</div>
+		<div id="mobile">
+		  <a href="cart.html"><i class="fa-solid fa-shopping-bag"></i></a>
+		  <i id="bar" class="fas fa-outdent"></i>
+		</div>
+	  </section>
+	<div id="container" class="container">
+		<div id="chat" class="chat">
+			<div id="messages" class="messages"></div>
+			<input id="input" type="text" placeholder="Say something..." autocomplete="off" autofocus="true" />
+		</div>
+		<img src="bot.png" alt="Robot cartoon" height="500vh">
+	</div>
+</body>
+<script type="text/javascript" src="robot.js" ></script>
+<script type="text/javascript" src="constants.js" ></script>
+<script type="text/javascript" src="speech.js" ></script>
+
+</html>
